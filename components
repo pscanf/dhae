@@ -1,0 +1,72 @@
+Message exchange nomenclature
+
+Sender		= snd
+Recipient	= rcp
+Message		= msg
+Signature	= sgn
+Payload		= pld
+
+------------------------------------------------------------
+
+Diffie-Hellman nomenclature
+
+Receiver
+	Public key
+		prime
+		generator
+		public token
+	Private key
+		prime
+		generator
+		private token
+
+Sender
+	Message
+		encryption token
+		payload
+
+These messages are not signed, so you cannot establish the
+identity of the sender.
+
+To establish the identity of the sender, you need to know
+his public key. To do that, you either need a certificate
+authority or to know his public key in advance.
+
+Let's assume now on that the sender's public key is known.
+The receiver can now establish the authenticity of the
+message. Let's see how.
+
+Receiver
+	Public key
+		prime
+		generator
+		public token
+	Private key
+		prime
+		generator
+		private token
+
+Sender
+	Public key
+		prime
+		generator
+		public token
+	Message
+		encryption token
+		payload
+		signature
+
+------------------------------------------------------------
+
+Signature
+
+	Signer
+		Public key
+			prime
+			generator
+			public token
+		Private key
+			prime
+			generator
+			private token
+		Signature
